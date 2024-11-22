@@ -16,3 +16,15 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     <button class="generate">Generate</button>
   </div>
 `;
+
+document.querySelector<HTMLDivElement>("#output")!.innerHTML = `
+  <div>
+    <h1>PokeAPI</h1>
+    ${createInput()}
+    ${createPrompt()}
+    ${createType()}
+    ${createShape()}
+    ${createNumber()}
+    <button class="generate">Generate</button>
+  </div>
+`;
