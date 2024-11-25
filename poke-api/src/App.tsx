@@ -1,7 +1,9 @@
 import "./App.css";
+import Prompt from "./components/Prompt.tsx";
 import PreviousPrompt from "./components/PreviousPrompt.tsx";
 import DiscreteSlider from "./components/DiscreteSlider.tsx";
 import List from "./components/List.tsx";
+
 export default function App() {
   const types = [
     { value: "normal", label: "Normal" },
@@ -36,10 +38,10 @@ export default function App() {
   return (
     <>
       {PreviousPrompt()}
-      <input className="prompt" placeholder="Describe your pokémon" />
+      <div className="prompt">{Prompt()}</div>
       <div className="type-list">Type {List(types)}</div>
       <div className="shape-list">Shape {List(shapes)}</div>
-      {DiscreteSlider()}
+      <div className="image-amount">Number of images {DiscreteSlider()}</div>
     </>
   );
 }

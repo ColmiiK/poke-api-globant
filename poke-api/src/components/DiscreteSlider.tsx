@@ -5,9 +5,8 @@ function valuetext(value: number) {
 }
 export default function DiscreteSlider() {
   return (
-    <Box sx={{ width: 300 }}>
+    <Box sx={{ width: 200 }}>
       <Slider
-        aria-label="Temperature"
         defaultValue={1}
         getAriaValueText={valuetext}
         valueLabelDisplay="auto"
